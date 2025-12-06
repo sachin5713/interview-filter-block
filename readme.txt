@@ -79,6 +79,17 @@ A custom Gutenberg block that displays a filtered list of posts with difficulty 
 3. Add the "Interview Filter Block" to any page or post using the block inserter
 4. The block will appear in the **Widgets** category in the block inserter
 
+**Important Testing Note:**
+
+This plugin requires posts to be present in your WordPress site to function properly. The block displays and filters posts, so it will only work when there are posts available.
+
+For testing purposes, you can:
+* Create posts manually and assign difficulty levels to them
+* Use a plugin like **FakePress** or similar dummy content generators to create multiple test posts
+* Ensure you have at least a few posts with different difficulty levels (Beginner, Intermediate, Advanced) assigned for proper testing
+
+Without posts in your site, the block will display "No posts found" message. Make sure to add dummy/test posts before testing the plugin functionality.
+
 == Frequently Asked Questions ==
 
 = How do I assign difficulty levels to posts? =
