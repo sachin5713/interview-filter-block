@@ -1,0 +1,213 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-interview-filter-block {
+	margin: 2rem 0;
+	padding: 1.5rem;
+	background-color: #fff;
+	border: 1px solid #e0e0e0;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+	// Alignment support
+	&.alignwide {
+		max-width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&.alignfull {
+		max-width: 100%;
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+
+	.interview-filter-block-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 2rem;
+		padding-bottom: 1rem;
+		border-bottom: 2px solid #f0f0f0;
+		flex-wrap: wrap;
+		gap: 1rem;
+
+		@media (max-width: 768px) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	.interview-filter-block-title {
+		margin: 0;
+		font-size: 1.5rem;
+		font-weight: 600;
+		color: #1e1e1e;
+	}
+
+	.interview-filter-block-controls {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.interview-filter-block-select {
+		padding: 0.5rem 1rem;
+		font-size: 1rem;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		background-color: #fff;
+		cursor: pointer;
+		transition: all 0.2s ease;
+
+		&:hover {
+			border-color: #0073aa;
+		}
+
+		&:focus {
+			outline: none;
+			border-color: #0073aa;
+			box-shadow: 0 0 0 2px rgba(0, 115, 170, 0.1);
+		}
+	}
+
+	.interview-filter-block-posts {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		gap: 1.5rem;
+		margin-top: 1.5rem;
+
+		@media (max-width: 768px) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.interview-filter-block-post {
+		padding: 1.5rem;
+		background-color: #f9f9f9;
+		border: 1px solid #e0e0e0;
+		border-radius: 6px;
+		transition: all 0.3s ease;
+
+		&:hover {
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			transform: translateY(-2px);
+		}
+	}
+
+	.interview-filter-block-post-title {
+		margin: 0 0 0.75rem 0;
+		font-size: 1.25rem;
+		font-weight: 600;
+		line-height: 1.4;
+
+		a {
+			color: #1e1e1e;
+			text-decoration: none;
+			transition: color 0.2s ease;
+
+			&:hover {
+				color: #0073aa;
+			}
+		}
+	}
+
+	.interview-filter-block-post-meta {
+		margin-bottom: 1rem;
+	}
+
+	.interview-filter-block-difficulty {
+		display: inline-block;
+		padding: 0.25rem 0.75rem;
+		font-size: 0.875rem;
+		font-weight: 500;
+		border-radius: 12px;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+
+		&.difficulty-beginner {
+			background-color: #d4edda;
+			color: #155724;
+		}
+
+		&.difficulty-intermediate {
+			background-color: #fff3cd;
+			color: #856404;
+		}
+
+		&.difficulty-advanced {
+			background-color: #f8d7da;
+			color: #721c24;
+		}
+
+		&.difficulty-not-set {
+			background-color: #e9ecef;
+			color: #6c757d;
+		}
+	}
+
+	.interview-filter-block-post-excerpt {
+		margin-top: 0.75rem;
+		color: #666;
+		line-height: 1.6;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	.interview-filter-block-loading,
+	.interview-filter-block-error,
+	.interview-filter-block-no-posts {
+		padding: 2rem;
+		text-align: center;
+		color: #666;
+	}
+
+	.interview-filter-block-loading {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+		margin: 2rem 0;
+	}
+
+	.interview-filter-block-spinner {
+		border: 3px solid #f3f3f3;
+		border-top: 3px solid #0073aa;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		animation: spin 1s linear infinite;
+	}
+
+	@keyframes spin {
+		0% { transform: rotate(0deg); }
+		100% { transform: rotate(360deg); }
+	}
+
+	.interview-filter-block-error {
+		color: #d63638;
+		background-color: #fcf0f1;
+		border: 1px solid #d63638;
+		border-radius: 4px;
+		padding: 1rem;
+		margin: 1rem 0;
+	}
+
+	.screen-reader-text {
+		clip: rect(1px, 1px, 1px, 1px);
+		position: absolute !important;
+		height: 1px;
+		width: 1px;
+		overflow: hidden;
+		word-wrap: normal !important;
+	}
+}
