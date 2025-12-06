@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/interview-filter-block",
+	"version": "0.1.0",
+	"title": "Interview Filter Block",
+	"category": "widgets",
+	"icon": "filter",
+	"description": "Display a list of posts with filtering by difficulty level.",
+	"example": {},
+	"attributes": {
+		"postsPerPage": {
+			"type": "number",
+			"default": 10
+		},
+		"selectedDifficulty": {
+			"type": "string",
+			"default": "all"
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ],
+		"alignWide": true
+	},
+	"textdomain": "interview-filter-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}
